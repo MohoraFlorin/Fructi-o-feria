@@ -137,8 +137,6 @@ def instructions():
     screen.addstr(sb, xa, 'You collect points by picking up the apples on the ground.', curses.color_pair(color_pref)|curses.A_BOLD)
     screen.addstr(sc, xa, 'Your objective is to pick as many apples as you can before the timer reaches 0s.', curses.color_pair(color_pref)|curses.A_BOLD)
     screen.addstr(sd, xa, 'Press ENTER to go back to the menu.', curses.color_pair(color_pref)|curses.A_BOLD)
-    #Here you left last night
-    #Something about last row
     screen.refresh()
     screen.getch()
     menu()

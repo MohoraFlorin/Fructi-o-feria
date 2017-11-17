@@ -72,7 +72,6 @@ def gameover_true():
             xd = int(dims[1]/2 - 3)
             xa = int(dims[0]/2 + 2)
             xb = int(dims[0]/2 + 3)
-            xg = int(dims[1]/2 - 2)
             #Printing the text
             screen.addstr(xc, xz, 'Game Over!', curses.color_pair(color_pref)|curses.A_BOLD)
             screen.addstr(xa, xz, 'Press q to quit.', curses.color_pair(color_pref)|curses.A_BOLD)
@@ -98,6 +97,7 @@ def menu():
     xg = int(dims[1]/2 - 2)
     selection = -1
     option = 0
+    #Main menu objects:
     while selection < 0:
         graphics = [0]*3
         graphics[option] = curses.A_REVERSE
@@ -106,6 +106,7 @@ def menu():
         screen.addstr(xo, xp, 'Instructions', curses.color_pair(color_pref)|graphics[1]|curses.A_BOLD)
         screen.addstr(xi, xg, 'Exit', curses.color_pair(color_pref)|graphics[2]|curses.A_BOLD)
         screen.refresh()
+        #Selecting one
         action = screen.getch()
         if option == 3:
             option = 1
